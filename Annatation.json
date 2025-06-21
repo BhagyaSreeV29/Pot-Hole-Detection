@@ -1,0 +1,11 @@
+{
+    "name": "data_annotaions",
+    "labels": [
+        {
+            "name": "pot_hole",
+            "color": "#f4a7a1",
+            "id": 1,
+            "type": "rectangle"
+        }
+    ]
+}
