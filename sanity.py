@@ -1,12 +1,30 @@
 import os
 
-img_dir = r'C:\Users\bhagy\OneDrive - sfc.edu\Desktop\Project\Pot-Hole-Detection\Data\Train\Images'
-label_dir = r'C:\Users\bhagy\OneDrive - sfc.edu\Desktop\Project\Pot-Hole-Detection\Data\Train\Labels'
+# Paths to your folders
+images_dir = r"C:\Users\bhagy\OneDrive - sfc.edu\Desktop\Project\Pot-Hole-Detection\Data\images\train"
+labels_dir = r"C:\Users\bhagy\OneDrive - sfc.edu\Desktop\Project\Pot-Hole-Detection\Data\labels\train"
 
-img_files = [os.path.splitext(f)[0] for f in os.listdir(img_dir) if f.lower().endswith(('.jpg', '.jpeg', '.png'))]
-label_files = [os.path.splitext(f)[0] for f in os.listdir(label_dir) if f.endswith('.txt')]
+# Get all image filenames without extension
+image_files = [os.path.splitext(f)[0] for f in os.listdir(images_dir)
+               if f.lower().endswith(('.jpg', '.jpeg', '.png'))]
 
-missing_labels = [f for f in img_files if f not in label_files]
+# Get all label filenames without extension
+label_files = [os.path.splitext(f)[0] for f in os.listdir(labels_dir)
+               if f.lower().endswith('.txt')]
 
-print(f"Total images: {len(img_files)}")
-print(f"Missing labels for: {missing_labels}")
+# Compare sets
+missing_labels = [img for img in image_files if img not in label_files]
+extra_labels = [lbl for lbl in label_files if lbl not in image_files]
+
+# Print results
+if not missing_labels and not extra_labels:
+    print("✅ All images have corresponding label files. Ready to train!")
+else:
+    if missing_labels:
+        print("❌ Missing label files for these images:")
+        for name in missing_labels:
+            print(f"- {name}")
+    if extra_labels:
+        print("\n⚠️ Unused label files (no corresponding image):")
+        for name in extra_labels:
+            print(f"- {name}")

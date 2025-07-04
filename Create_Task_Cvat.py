@@ -9,7 +9,7 @@ USERNAME = "bhagyasrivemavarapu09"
 PASSWORD = "Bhagya@12345"
 TASK_NAME = "CVAT Task - Pothole"
 LABEL_NAME = "pothole"
-IMAGE_DIR = r"C:/Users/bhagy/OneDrive - sfc.edu/Desktop/Project/Data/Train/Images/batch_1"
+IMAGE_DIR = r"C:/Users/bhagy/OneDrive - sfc.edu/Desktop/Project/Pot-Hole-Detection/Data/Batch2Test"
 
 # Gather image file paths
 image_paths = sorted([
@@ -17,7 +17,7 @@ image_paths = sorted([
     for f in os.listdir(IMAGE_DIR)
     if f.lower().endswith(('.jpg', '.jpeg', '.png'))
 ])
-with open('C:/Users/bhagy/OneDrive - sfc.edu/Desktop/Project/Annatation.json', 'r') as f:
+with open('C:/Users/bhagy/OneDrive - sfc.edu/Desktop/Project/Pot-Hole-Detection/Annatation.json', 'r') as f:
     annotations = json.load(f)
 # Connect to CVAT and create + upload in one step
 with make_client(host=HOST) as client:
