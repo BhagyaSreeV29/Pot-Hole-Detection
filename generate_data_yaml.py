@@ -25,4 +25,5 @@ def generate_data_yaml():
 
 # Run when called directly
 if __name__ == "__main__":
+    # Generates data.yaml for YOLO training
     generate_data_yaml()
