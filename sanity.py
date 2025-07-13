@@ -24,6 +24,7 @@ def check_image_label_consistency(images_dir, labels_dir):
                 print(f"- {name}")
 
 if __name__ == "__main__":
+    # Validates dataset and annotation quality
     parser = argparse.ArgumentParser(description="Sanity check: image-label consistency for YOLO training.")
     parser.add_argument("--images", default="Data/images/train", help="Path to image folder")
     parser.add_argument("--labels", default="Data/labels/train", help="Path to label folder")
