@@ -32,4 +32,5 @@ def export_annotations():
         print(f"\u2705 Annotations successfully saved to: {output_path}")
 
 if __name__ == "__main__":
+    # Converts COCO annotations to YOLO format
     export_annotations()
