@@ -98,5 +98,6 @@ def upload_to_cvat(image_dir, json_path):
         print(f"📤 Task '{TASK_NAME}' uploaded successfully (ID: {task.id})")
 
 if __name__ == "__main__":
+    # Converts COCO annotations to YOLO format
     convert_yolo_to_coco(IMAGE_FOLDER, OUTPUT_JSON)
     upload_to_cvat(IMAGE_FOLDER, OUTPUT_JSON)
