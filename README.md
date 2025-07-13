@@ -1,3 +1,4 @@
+<!-- Updated project documentation for clarity -->
 # 🕳️ Pothole Detection using YOLO & CVAT
 
 This project detects potholes in road images using object detection with YOLO. It includes image annotation with CVAT, format conversion, and model training.
