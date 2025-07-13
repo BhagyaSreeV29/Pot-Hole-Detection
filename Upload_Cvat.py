@@ -32,7 +32,7 @@ def load_annotation_schema(annotation_file):
     """
     with open(annotation_file, 'r') as f:
         return json.load(f)
-
+# Handles uploading images to CVAT
 def create_task_on_cvat(host, username, password, task_name, label_name, image_paths, annotation_schema):
     """
     Connects to CVAT and creates a task with uploaded images and COCO schema.
