@@ -1,28 +1,29 @@
-# 🛣️ Pothole Detection from Video using YOLOv5
+# 🕳️ Pothole Detection using YOLO & CVAT
 
-This project detects potholes in road videos using the YOLOv5 object detection model. It involves extracting video frames, annotating them, training the model, and running inference to highlight potholes in output videos.
-
----
-
-## 🚀 Features
-
-- Frame extraction from road videos
-- Manual annotation using CVAT (COCO format)
-- COCO to YOLO format conversion
-- YOLOv5 training with data augmentation
-- Inference on test videos with bounding box output
+This project detects potholes in road images using object detection with YOLO. It includes image annotation with CVAT, format conversion, and model training.
 
 ---
 
-## 🛠 Tech Stack
+## 💡 Overview
 
-- Python  
-- OpenCV  
-- YOLOv5 (PyTorch)  
-- CVAT (local, via Docker)  
-- Virtual environment
+- Annotate images using CVAT (COCO format)
+- Convert COCO annotations to YOLO format
+- Prepare training data
+- Run sanity checks
+- Train the model using YOLO
 
 ---
 
-## 🗂️ Folder Structure
+## 📁 Project Structure
 
+Pot-Hole-Detection/
+├── main.py
+├── Create_Task_Cvat.py
+├── export_annotations.py
+├── Cocotoyolo.py
+├── sanity.py
+├── Upload_Cvat.py
+├── generate_data_yaml.py
+├── data.yaml
+├── .env.template
+└── README.md
