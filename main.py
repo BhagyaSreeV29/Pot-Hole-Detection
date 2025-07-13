@@ -29,4 +29,5 @@ def main():
     print("\n✅ Workflow completed successfully\n")
 
 if __name__ == "__main__":
+    #directly run the main function
     main()
